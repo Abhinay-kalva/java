@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid and Flexbox Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    /* GRID EXAMPLE */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .grid-item {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .grid-item:hover {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+
+    /* FLEXBOX EXAMPLE */
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .flex-item {
+      background-color: #2196F3;
+      color: white;
+      padding: 20px;
+      width: 100px;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .flex-item:hover {
+      background-color: #0b7dda;
+      transform: rotate(10deg);
+    }
+
+    /* Simple animation for a moving box */
+    @keyframes moveBox {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(100px); }
+      100% { transform: translateX(0); }
+    }
+
+    .animated-box {
+      margin: 40px auto;
+      width: 80px;
+      height: 80px;
+      background-color: orange;
+      border-radius: 10px;
+      animation: moveBox 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Grid, Flexbox, and Animation Demo</h1>
+
+  <h2>CSS Grid Example</h2>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+
+  <h2>Flexbox Example</h2>
+  <div class="flex-container">
+    <div class="flex-item">A</div>
+    <div class="flex-item">B</div>
+    <div class="flex-item">C</div>
+  </div>
+
+  <h2>Simple Animation</h2>
+  <div class="animated-box"></div>
+
+</body>
+</html>
