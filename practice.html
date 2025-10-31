@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Navbar</title>
+<style>
+nav {
+  display:flex;
+  justify-content:space-around;
+  background:#2980b9;
+  flex-wrap:wrap;
+}
+nav a {
+  color:white; text-decoration:none; padding:15px; display:block;
+}
+@media(max-width:600px){
+  nav { flex-direction:column; text-align:center; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
+</body>
+</html>
